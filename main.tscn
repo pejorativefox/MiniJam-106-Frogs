@@ -1,25 +1,234 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://frog.tscn" type="PackedScene" id=1]
 [ext_resource path="res://data/scripts/frog.gd" type="Script" id=2]
-[ext_resource path="res://Platform.tscn" type="PackedScene" id=3]
+[ext_resource path="res://data/images/level_sheet.png" type="Texture" id=3]
+[ext_resource path="res://SpikeCollider.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Mushroom.tscn" type="PackedScene" id=5]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="TileSet" id=10]
+0/name = "level_sheet.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 48, 48 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 2
+0/autotile/bitmask_flags = [ Vector2( 0, 0 ), 432, Vector2( 0, 1 ), 438, Vector2( 0, 2 ), 54, Vector2( 1, 0 ), 504, Vector2( 1, 1 ), 511, Vector2( 1, 2 ), 63, Vector2( 2, 0 ), 216, Vector2( 2, 1 ), 219, Vector2( 2, 2 ), 27 ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 16, 16 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 9 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "level_sheet.png 1"
+1/texture = ExtResource( 3 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 112, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "level_sheet.png 2"
+2/texture = ExtResource( 3 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 16, 112, 16, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "level_sheet.png 3"
+3/texture = ExtResource( 3 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 32, 112, 16, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "level_sheet.png 4"
+4/texture = ExtResource( 3 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 96, 16, 16 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "level_sheet.png 5"
+5/texture = ExtResource( 3 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 16, 96, 16, 16 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "level_sheet.png 6"
+6/texture = ExtResource( 3 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 32, 96, 16, 16 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
 
 [node name="Root" type="Node2D"]
 scale = Vector2( 2, 2 )
 
 [node name="Frog" parent="." instance=ExtResource( 1 )]
-position = Vector2( 41, 47.5 )
+position = Vector2( 40, 320 )
 scale = Vector2( 1, 1 )
+z_index = 1
 script = ExtResource( 2 )
 
-[node name="Platform" parent="." instance=ExtResource( 3 )]
-position = Vector2( 168.5, 119 )
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 10 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 131075, 0, 0, 131076, 0, 1, 131077, 0, 2, 131085, 0, 0, 131086, 0, 1, 131087, 0, 1, 131088, 0, 1, 131089, 0, 1, 131090, 0, 2, 196611, 0, 131072, 196612, 0, 131073, 196613, 0, 131074, 196621, 0, 131072, 196622, 0, 131073, 196623, 0, 131073, 196624, 0, 131073, 196625, 0, 131073, 196626, 0, 131074, 262158, 4, 0, 262159, 5, 0, 262160, 5, 0, 262161, 6, 0, 393222, 0, 0, 393223, 0, 1, 393224, 0, 2, 458758, 0, 131072, 458759, 0, 131073, 458760, 0, 131074, 458766, 1, 0, 458767, 2, 0, 458768, 2, 0, 458769, 3, 0, 458778, 0, 0, 458779, 0, 1, 458780, 0, 1, 458781, 0, 1, 458782, 0, 2, 524299, 0, 0, 524300, 0, 1, 524301, 0, 1, 524302, 0, 1, 524303, 0, 1, 524304, 0, 1, 524305, 0, 1, 524306, 0, 1, 524307, 0, 2, 524314, 0, 131072, 524315, 0, 131073, 524316, 0, 131073, 524317, 0, 131073, 524318, 0, 131074, 589835, 0, 131072, 589836, 0, 131073, 589837, 0, 131073, 589838, 0, 131073, 589839, 0, 131073, 589840, 0, 131073, 589841, 0, 131073, 589842, 0, 131073, 589843, 0, 131074, 589852, 4, 0, 589853, 6, 0, 720927, 0, 0, 720928, 0, 1, 720929, 0, 1, 720930, 0, 1, 720931, 0, 1, 720932, 0, 2, 786463, 0, 131072, 786464, 0, 131073, 786465, 0, 131073, 786466, 0, 131073, 786467, 0, 131073, 786468, 0, 131074, 917531, 1, 0, 917532, 3, 0, 983064, 0, 0, 983065, 0, 1, 983066, 0, 1, 983067, 0, 1, 983068, 0, 2, 1048596, 1, 0, 1048597, 3, 0, 1048600, 0, 131072, 1048601, 0, 131073, 1048602, 0, 131073, 1048603, 0, 131073, 1048604, 0, 131074, 1114130, 0, 0, 1114131, 0, 1, 1114132, 0, 1, 1114133, 0, 2, 1179654, 0, 0, 1179655, 0, 1, 1179656, 0, 2, 1179666, 0, 65536, 1179667, 0, 65537, 1179668, 0, 65537, 1179669, 0, 65538, 1245190, 0, 65536, 1245191, 0, 65537, 1245192, 0, 65538, 1245202, 0, 65536, 1245203, 0, 65537, 1245204, 0, 65537, 1245205, 0, 65538, 1310721, 0, 0, 1310722, 0, 1, 1310723, 0, 2, 1310726, 0, 65536, 1310727, 0, 65537, 1310728, 0, 65538, 1310738, 0, 65536, 1310739, 0, 65537, 1310740, 0, 65537, 1310741, 0, 65538, 1376257, 0, 65536, 1376258, 0, 65537, 1376259, 0, 65538, 1376262, 0, 65536, 1376263, 0, 65537, 1376264, 0, 65538, 1376274, 0, 65536, 1376275, 0, 65537, 1376276, 0, 65537, 1376277, 0, 65538, 1441793, 0, 131072, 1441794, 0, 131073, 1441795, 0, 131074, 1441798, 0, 131072, 1441799, 0, 131073, 1441800, 0, 131074, 1441810, 0, 131072, 1441811, 0, 131073, 1441812, 0, 131073, 1441813, 0, 131074 )
 
-[node name="Platform2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 47.5, 145 )
+[node name="SpikeCollider" parent="." instance=ExtResource( 4 )]
+position = Vector2( 447.5, 233 )
 
-[node name="Platform3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 260, 134.5 )
+[node name="SpikeCollider2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 336, 266 )
 
-[node name="Platform4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 224.5, 48.5 )
+[node name="SpikeCollider3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 463.5, 150.5 )
+
+[node name="SpikeCollider4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 255.5, 121.5 )
+scale = Vector2( 2.9, 1.005 )
+
+[node name="SpikeCollider5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 255.5, 70 )
+scale = Vector2( 2.9, 1.005 )
+
+[node name="Sprite" parent="." instance=ExtResource( 5 )]
+position = Vector2( 116, 263.5 )

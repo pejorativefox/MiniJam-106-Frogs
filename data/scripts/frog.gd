@@ -6,7 +6,7 @@ const ACCEL = 1028
 const MAX_SPEED = 256
 const FRICTION = 1
 const AIR_RESIST = 0.02
-const JUMP_FORCE = 400
+const JUMP_FORCE = 350
 
 var velocity = Vector2()
 
@@ -49,6 +49,11 @@ func _physics_process(delta):
 			velocity.x = lerp(velocity.x, 0, AIR_RESIST)
 			
 	velocity = move_and_slide(velocity, Vector2(0, -1))
+	
+	# check off screen
+	if position.y > 600:
+		position.x = 40
+		position.y = 320
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

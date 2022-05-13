@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://data/images/frog.png" type="Texture" id=1]
 
@@ -39,7 +39,10 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Frog" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 7.75, 8.25 )
+
+[node name="Frog" type="KinematicBody2D"]
 scale = Vector2( 2, 2 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
@@ -48,3 +51,7 @@ frames = SubResource( 3 )
 animation = "walk"
 frame = 1
 playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.25, -0.25 )
+shape = SubResource( 8 )

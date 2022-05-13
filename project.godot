@@ -14,6 +14,19 @@ config/name="Mini Jam-106-Frogs"
 run/main_scene="res://main.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=1280
+window/size/height=720
+window/size/test_width=1600
+window/size/test_height=900
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[global]
+
+gravity=false
+
 [input]
 
 jump={
@@ -40,3 +53,7 @@ common/enable_pause_aware_picking=true
 [rendering]
 
 environment/default_environment="res://default_env.tres"
+
+[world]
+
+2d/cell_size=16

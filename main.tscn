@@ -8,13 +8,18 @@
 scale = Vector2( 2, 2 )
 
 [node name="Frog" parent="." instance=ExtResource( 1 )]
-position = Vector2( 148.5, 55 )
+position = Vector2( 41, 47.5 )
 scale = Vector2( 1, 1 )
-motion/sync_to_physics = true
 script = ExtResource( 2 )
 
 [node name="Platform" parent="." instance=ExtResource( 3 )]
-position = Vector2( 263.5, 245.5 )
+position = Vector2( 168.5, 119 )
 
 [node name="Platform2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 144.5, 187 )
+position = Vector2( 47.5, 145 )
+
+[node name="Platform3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 260, 134.5 )
+
+[node name="Platform4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 224.5, 48.5 )

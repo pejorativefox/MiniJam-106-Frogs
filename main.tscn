@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://frog.tscn" type="PackedScene" id=1]
+[ext_resource path="res://data/scripts/frog.gd" type="Script" id=2]
+
+[node name="Root" type="Node2D"]
+scale = Vector2( 2, 2 )
+
+[node name="Frog" parent="." instance=ExtResource( 1 )]
+position = Vector2( 144.5, 159.5 )
+script = ExtResource( 2 )

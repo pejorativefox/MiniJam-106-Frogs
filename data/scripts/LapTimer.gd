@@ -10,7 +10,7 @@ onready var lap_count_label = $VBoxContainer/LapCountLabel
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	total_laps = 2
+	total_laps = 4
 	Signals.connect("lap_finished", self, "lap_finished")
 	for x in range(0, total_laps, 1):
 		lap_times_container.add_child(new_lap_time_item(x))

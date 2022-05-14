@@ -22,7 +22,6 @@ scale = Vector2( 2, 2 )
 position = Vector2( 40, 320 )
 scale = Vector2( 1, 1 )
 z_index = 1
-godmode = true
 
 [node name="TileMap" type="TileMap" parent="LevelRoot"]
 tile_set = ExtResource( 3 )

@@ -13,6 +13,7 @@ var levels = {
 func _ready():
 	Signals.connect("play_activated", self, "play_activated")
 	Signals.connect("level_finished", self, "level_finished")
+	Signals.connect("exit_level", self, "exit_level")
 	main_menu = load("res://MainMenu.tscn").instance()
 	self.add_child(main_menu)
 	print_debug("Game.gd ready")
@@ -21,16 +22,20 @@ func _ready():
 func play_activated():
 	print_debug("play_activated")
 	self.remove_child(main_menu)
+	main_menu.queue_free()
 	start_level(current_level)
 
-func start_level(level_id):
-	# Cleanup old state if we have
+func delete_level():
 	if current_level != null:
 		self.remove_child(current_level)
 		current_level.queue_free()
 		self.remove_child(lap_timer)
 		lap_timer.queue_free()
 		current_level = null
+
+func start_level(level_id):
+	# Cleanup old state if we have
+	delete_level()
 	# Load and populate this level
 	current_level = load(levels[current_level_id]).instance()
 	lap_timer = load("res://LapTimer.tscn").instance()
@@ -50,3 +55,8 @@ func level_finished():
 		#cleanup
 		current_level_id += 1
 		start_level(current_level_id)
+
+func exit_level():
+	delete_level()
+	main_menu = load("res://MainMenu.tscn").instance()
+	self.add_child(main_menu)

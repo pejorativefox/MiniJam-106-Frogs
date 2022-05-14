@@ -11,6 +11,7 @@ signal last_mushroom_collected(s_number)
 signal player_hit_hazard()
 signal lap_finished()
 signal level_finished()
+signal exit_level()
 
 func _ready():
 	print("Signals: Autoloaded.")

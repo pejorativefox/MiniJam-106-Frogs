@@ -3,7 +3,7 @@ extends Node
 export(int) var sequence_number
 export(bool) var last
 
-onready var player = get_node("/root/Root/Frog")
+onready var player = get_node("/root/World/LevelRoot/Frog")
 
 func _ready():
 	Signals.connect("mushroom_collected", self, "mushroom_collected")
@@ -27,6 +27,7 @@ func mushroom_collected(s_number):
 
 func last_mushroom_collected():
 	if sequence_number == 0:
+		Signals.emit_signal("lap_finished")
 		set_ready();
 
 func set_ready():

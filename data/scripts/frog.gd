@@ -8,9 +8,10 @@ const FRICTION = 1
 const AIR_RESIST = 0.02
 const JUMP_FORCE = 350
 
+export(bool) var godmode = false
+
 var velocity = Vector2()
 var resolution
-
 
 onready var player_sprite = $Sprite
 

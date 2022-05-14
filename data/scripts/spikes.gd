@@ -1,7 +1,7 @@
 extends Area2D
 
-onready var player = get_node("/root/World/LevelRoot/Frog")
-onready var sploder = get_node("/root/World/LevelRoot/BodySploder")
+onready var player = get_node("/root/World/Frog")
+onready var sploder = get_node("/root/World/BodySploder")
 
 func body_entered(node):
 	print_debug("Spikes!")

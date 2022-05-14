@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Mushroom.tscn" type="PackedScene" id=2]
+[ext_resource path="res://SpikeCollider.tscn" type="PackedScene" id=3]
+[ext_resource path="res://data/tilesets/level.tres" type="TileSet" id=4]
+
+[node name="LevelRoot" type="Node2D"]
+scale = Vector2( 2, 2 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 131075, 0, 0, 131076, 0, 1, 131077, 0, 2, 131085, 0, 0, 131086, 0, 1, 131087, 0, 1, 131088, 0, 1, 131089, 0, 1, 131090, 0, 2, 196611, 0, 131072, 196612, 0, 131073, 196613, 0, 131074, 196621, 0, 131072, 196622, 0, 131073, 196623, 0, 131073, 196624, 0, 131073, 196625, 0, 131073, 196626, 0, 131074, 262158, 4, 0, 262159, 5, 0, 262160, 5, 0, 262161, 6, 0, 393222, 0, 0, 393223, 0, 1, 393224, 0, 2, 458758, 0, 131072, 458759, 0, 131073, 458760, 0, 131074, 458766, 1, 0, 458767, 2, 0, 458768, 2, 0, 458769, 3, 0, 458778, 0, 0, 458779, 0, 1, 458780, 0, 1, 458781, 0, 1, 458782, 0, 2, 524299, 0, 0, 524300, 0, 1, 524301, 0, 1, 524302, 0, 1, 524303, 0, 1, 524304, 0, 1, 524305, 0, 1, 524306, 0, 1, 524307, 0, 2, 524314, 0, 131072, 524315, 0, 131073, 524316, 0, 131073, 524317, 0, 131073, 524318, 0, 131074, 589835, 0, 131072, 589836, 0, 131073, 589837, 0, 131073, 589838, 0, 131073, 589839, 0, 131073, 589840, 0, 131073, 589841, 0, 131073, 589842, 0, 131073, 589843, 0, 131074, 589852, 4, 0, 589853, 6, 0, 720927, 0, 0, 720928, 0, 1, 720929, 0, 1, 720930, 0, 1, 720931, 0, 1, 720932, 0, 2, 786463, 0, 131072, 786464, 0, 131073, 786465, 0, 131073, 786466, 0, 131073, 786467, 0, 131073, 786468, 0, 131074, 917531, 1, 0, 917532, 3, 0, 983064, 0, 0, 983065, 0, 1, 983066, 0, 1, 983067, 0, 1, 983068, 0, 2, 1048596, 1, 0, 1048597, 3, 0, 1048600, 0, 131072, 1048601, 0, 131073, 1048602, 0, 131073, 1048603, 0, 131073, 1048604, 0, 131074, 1114130, 0, 0, 1114131, 0, 1, 1114132, 0, 1, 1114133, 0, 2, 1179654, 0, 0, 1179655, 0, 1, 1179656, 0, 2, 1179666, 0, 65536, 1179667, 0, 65537, 1179668, 0, 65537, 1179669, 0, 65538, 1245190, 0, 65536, 1245191, 0, 65537, 1245192, 0, 65538, 1245202, 0, 65536, 1245203, 0, 65537, 1245204, 0, 65537, 1245205, 0, 65538, 1310721, 0, 0, 1310722, 0, 1, 1310723, 0, 2, 1310726, 0, 65536, 1310727, 0, 65537, 1310728, 0, 65538, 1310738, 0, 65536, 1310739, 0, 65537, 1310740, 0, 65537, 1310741, 0, 65538, 1376257, 0, 65536, 1376258, 0, 65537, 1376259, 0, 65538, 1376262, 0, 65536, 1376263, 0, 65537, 1376264, 0, 65538, 1376274, 0, 65536, 1376275, 0, 65537, 1376276, 0, 65537, 1376277, 0, 65538, 1441793, 0, 131072, 1441794, 0, 131073, 1441795, 0, 131074, 1441798, 0, 131072, 1441799, 0, 131073, 1441800, 0, 131074, 1441810, 0, 131072, 1441811, 0, 131073, 1441812, 0, 131073, 1441813, 0, 131074 )
+
+[node name="SpikeCollider" parent="." instance=ExtResource( 3 )]
+position = Vector2( 447.5, 233 )
+
+[node name="SpikeCollider2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 336, 266 )
+
+[node name="SpikeCollider3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 463.5, 150.5 )
+
+[node name="SpikeCollider4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 255.5, 121.5 )
+scale = Vector2( 2.9, 1.005 )
+
+[node name="SpikeCollider5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 255.5, 70 )
+scale = Vector2( 2.9, 1.005 )
+
+[node name="Mushroom" parent="." instance=ExtResource( 2 )]
+position = Vector2( 114.5, 250 )
+
+[node name="Mushroom2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 302.5, 239 )
+sequence_number = 1
+
+[node name="Mushroom3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 411, 211 )
+sequence_number = 2
+
+[node name="Mushroom4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 544, 160.5 )
+sequence_number = 3
+
+[node name="Mushroom5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 456, 96.5 )
+sequence_number = 4
+
+[node name="Mushroom6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 256, 96.5 )
+sequence_number = 5
+
+[node name="Mushroom7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 120, 80.5 )
+sequence_number = 6
+
+[node name="Mushroom8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 72, 20.5 )
+sequence_number = 7
+last = true
+
+[node name="Start" type="Node2D" parent="."]
+position = Vector2( 39.5, 318.5 )

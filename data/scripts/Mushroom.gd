@@ -3,7 +3,7 @@ extends Node
 export(int) var sequence_number
 export(bool) var last
 
-onready var player = get_node("/root/World/LevelRoot/Frog")
+onready var player = get_node("/root/World/Frog")
 
 func _ready():
 	Signals.connect("mushroom_collected", self, "mushroom_collected")

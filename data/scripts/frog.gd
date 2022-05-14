@@ -17,7 +17,12 @@ func _ready():
 
 
 func _unhandled_input(event):
-	pass
+	if event is InputEventKey:
+		if event.pressed:
+			if event.scancode == KEY_F:
+				OS.window_fullscreen = !OS.window_fullscreen
+			if event.scancode == KEY_ESCAPE:
+				get_tree().quit()
 
 
 func _physics_process(delta):
@@ -59,3 +64,6 @@ func _physics_process(delta):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+	
+func splode():
+	$BodySploder.splode()

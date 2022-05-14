@@ -64,3 +64,28 @@ position = Vector2( 114.5, 250 )
 [node name="Mushroom2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 302.5, 239 )
 sequence_number = 1
+
+[node name="Mushroom3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 411, 211 )
+sequence_number = 2
+
+[node name="Mushroom4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 544, 160.5 )
+sequence_number = 3
+
+[node name="Mushroom5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 456, 96.5 )
+sequence_number = 4
+
+[node name="Mushroom6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 256, 96.5 )
+sequence_number = 5
+
+[node name="Mushroom7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 120, 80.5 )
+sequence_number = 6
+
+[node name="Mushroom8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 72, 20.5 )
+sequence_number = 7
+last = true

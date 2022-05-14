@@ -9,11 +9,14 @@ const AIR_RESIST = 0.02
 const JUMP_FORCE = 350
 
 var velocity = Vector2()
+var resolution
+
 
 onready var player_sprite = $Sprite
 
 func _ready():
-	pass # Replace with function body.
+	resolution = Vector2(get_viewport().size.x/2, get_viewport().size.y/2+40)
+	print_debug(resolution)
 
 
 func _unhandled_input(event):
@@ -56,7 +59,7 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector2(0, -1))
 	
 	# check off screen
-	if position.y > 600:
+	if position.y > resolution.y:
 		position.x = 40
 		position.y = 320
 

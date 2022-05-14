@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://frog.tscn" type="PackedScene" id=1]
 [ext_resource path="res://data/scripts/frog.gd" type="Script" id=2]
 [ext_resource path="res://data/tilesets/level.tres" type="TileSet" id=3]
 [ext_resource path="res://SpikeCollider.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Mushroom.tscn" type="PackedScene" id=5]
-[ext_resource path="res://data/ui_themes/theme.tres" type="Theme" id=6]
 [ext_resource path="res://BodySploder.tscn" type="PackedScene" id=7]
 
 [node name="Root" type="Node2D"]
@@ -40,21 +39,6 @@ scale = Vector2( 2.9, 1.005 )
 [node name="SpikeCollider5" parent="." instance=ExtResource( 4 )]
 position = Vector2( 255.5, 70 )
 scale = Vector2( 2.9, 1.005 )
-
-[node name="Panel" type="Panel" parent="."]
-visible = false
-margin_left = 562.0
-margin_top = 7.0
-margin_right = 626.0
-margin_bottom = 87.0
-theme = ExtResource( 6 )
-
-[node name="Label" type="Label" parent="Panel"]
-margin_left = 10.5
-margin_top = 3.0
-margin_right = 50.5
-margin_bottom = 17.0
-text = "Time!"
 
 [node name="BodySploder" parent="." instance=ExtResource( 7 )]
 

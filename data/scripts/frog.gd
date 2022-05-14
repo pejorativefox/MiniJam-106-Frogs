@@ -74,6 +74,6 @@ func player_hit_hazard():
 	var body_sploder = sploder.instance()
 	body_sploder.splode(position)
 	self.get_parent().add_child(body_sploder)
-	position.x = 40
-	position.y = 320
+	var start = self.get_parent().get_node("Start")
+	position = start.position
 	velocity = Vector2.ZERO

@@ -37,7 +37,6 @@ position = Vector2( 114.5, 250 )
 [node name="Mushroom2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 302.5, 239 )
 sequence_number = 1
-last = true
 
 [node name="Mushroom3" parent="." instance=ExtResource( 2 )]
 position = Vector2( 411, 211 )

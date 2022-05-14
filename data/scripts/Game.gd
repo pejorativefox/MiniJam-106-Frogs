@@ -6,8 +6,8 @@ var current_level = null
 var lap_timer = null
 
 var levels = {
-	1: "res://Level01.tscn",
-	2: "res://Level02.tscn"
+	1: "res://Level02.tscn",
+	2: "res://Level01.tscn"
 	}
 
 func _ready():
@@ -39,6 +39,8 @@ func start_level(level_id):
 	current_level.add_child(player)
 	self.add_child(current_level)
 	self.add_child(lap_timer)
+	var start_node = current_level.get_node("Start")
+	player.position = start_node.position
 	get_tree().paused = false
 
 func level_finished():

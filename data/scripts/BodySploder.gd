@@ -7,5 +7,10 @@ func _ready():
 	$BloodParticles.emitting = false
 
 func splode(position):
+	print("splode: ", position)
 	self.position = position
 	$AnimationPlayer.play("splode")
+
+
+func _on_Timer_timeout():
+	self.get_parent().remove_child(self)

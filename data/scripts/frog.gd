@@ -14,10 +14,11 @@ var velocity = Vector2()
 var resolution
 
 onready var player_sprite = $Sprite
+var sploder = load("res://BodySploder.tscn")
 
 func _ready():
 	resolution = Vector2(get_viewport().size.x/2, get_viewport().size.y/2+40)
-	print_debug(resolution)
+	Signals.connect("player_hit_hazard", self, "player_hit_hazard")
 
 
 func _unhandled_input(event):
@@ -69,5 +70,10 @@ func _physics_process(delta):
 func _process(delta):
 	pass
 	
-func splode():
-	$BodySploder.splode()
+func player_hit_hazard():
+	var body_sploder = sploder.instance()
+	body_sploder.splode(position)
+	self.get_parent().add_child(body_sploder)
+	position.x = 40
+	position.y = 320
+	velocity = Vector2.ZERO

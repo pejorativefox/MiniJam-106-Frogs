@@ -3,7 +3,6 @@ extends Node
 export(int) var sequence_number
 export(bool) var last
 
-onready var player = get_node("/root/World/Frog")
 
 func _ready():
 	Signals.connect("mushroom_collected", self, "mushroom_collected")
@@ -15,7 +14,7 @@ func _ready():
 		set_not_ready()
 
 func mushroom_collected(s_number):
-#	print("mushroom_collected: ", s_number, "/", sequence_number)
+	print("mushroom_collected: ", s_number, "/", sequence_number)
 	if s_number == sequence_number:
 		print(sequence_number, ": It's me!")
 		set_not_ready()
@@ -26,6 +25,7 @@ func mushroom_collected(s_number):
 		set_ready()
 
 func last_mushroom_collected():
+	print("last_mushroom_collected")
 	if sequence_number == 0:
 		Signals.emit_signal("lap_finished")
 		set_ready();
@@ -39,6 +39,7 @@ func set_not_ready():
 	$Sprite.self_modulate = Color(1, 1, 1, 0.3)
 
 func _on_Area2D_body_entered(body):
+	var player = get_node("/root/Game/LevelRoot/Frog")
 	if body == player:
 		print("Area2D_entered: ", sequence_number)
 		Signals.emit_signal("mushroom_collected", sequence_number)

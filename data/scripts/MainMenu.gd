@@ -22,9 +22,9 @@ func _input(event):
 			current_selection += 1
 	elif event.is_action_pressed("ui_accept"):
 		if current_selection == 0:
-			get_tree().change_scene("res://GameScene.tscn")
+			Signals.emit_signal("play_activated")
 		elif current_selection == 1:
-			pass
+			Signals.emit_signal("about_activated")
 		elif current_selection == 2:
 			get_tree().quit()
 

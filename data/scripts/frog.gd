@@ -66,8 +66,8 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector2(0, -1))
 	
 	# check off screen
-	if position.y > resolution.y:
-		Signals.emit_signal("player_off_map")
+	if position.y > resolution.y - 30:
+		Signals.emit_signal("player_hit_hazard")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

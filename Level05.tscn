@@ -1,0 +1,163 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://data/tilesets/level.tres" type="TileSet" id=1]
+[ext_resource path="res://SpikeCollider.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Mushroom.tscn" type="PackedScene" id=3]
+[ext_resource path="res://SpikeMine.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 200, 330 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "up-down"
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5, 10 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 200, 330 ), Vector2( 200, 113 ), Vector2( 200, 330 ) ]
+}
+
+[node name="LevelRoot" type="Node2D"]
+scale = Vector2( 2, 2 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 196620, 1, 0, 196621, 2, 0, 196622, 2, 0, 196623, 2, 0, 196624, 2, 0, 196625, 2, 0, 196626, 2, 0, 196627, 2, 0, 196628, 2, 0, 196629, 2, 0, 196630, 2, 0, 196631, 3, 0, 196645, 7, 0, 196646, 8, 0, 196647, 9, 0, 262152, 7, 0, 262153, 8, 0, 262154, 8, 0, 262155, 8, 0, 262156, 8, 0, 262157, 8, 0, 262158, 8, 0, 262159, 8, 0, 262160, 8, 0, 262161, 8, 0, 262162, 8, 0, 262163, 8, 0, 262164, 8, 0, 262165, 8, 0, 262166, 8, 0, 262167, 8, 0, 262168, 8, 0, 262169, 8, 0, 262170, 8, 0, 262171, 9, 0, 393217, 7, 0, 393218, 8, 0, 393219, 9, 0, 589830, 7, 0, 589831, 8, 0, 589832, 8, 0, 589833, 9, 0, 589839, 7, 0, 589840, 8, 0, 589841, 8, 0, 589842, 9, 0, 851989, 7, 0, 851990, 8, 0, 851991, 8, 0, 851992, 9, 0, 983047, 7, 0, 983048, 8, 0, 983049, 8, 0, 983050, 9, 0, 983054, 7, 0, 983055, 8, 0, 983056, 8, 0, 983057, 9, 0, 1048576, 7, 0, 1048577, 8, 0, 1048578, 9, 0, 1376259, 7, 0, 1376260, 8, 0, 1376261, 8, 0, 1376262, 8, 0, 1376263, 9, 0, 1376274, 7, 0, 1376275, 8, 0, 1376276, 8, 0, 1376277, 9, 0, 1376291, 7, 0, 1376292, 8, 0, 1376293, 9, 0 )
+
+[node name="SpikeCollider" parent="." instance=ExtResource( 2 )]
+position = Vector2( 287.5, 58.5 )
+scale = Vector2( 10.4554, 1.04178 )
+
+[node name="SpikeCollider2" parent="." instance=ExtResource( 2 )]
+position = Vector2( -67, 81 )
+scale = Vector2( 6.68, 1 )
+
+[node name="SpikeCollider3" parent="." instance=ExtResource( 2 )]
+position = Vector2( -64, 109.5 )
+
+[node name="SpikeCollider4" parent="." instance=ExtResource( 2 )]
+position = Vector2( -64, 132.5 )
+scale = Vector2( 1.24, 1.005 )
+
+[node name="SpikeCollider5" parent="." instance=ExtResource( 2 )]
+position = Vector2( -61.5001, 158.5 )
+scale = Vector2( 1.04, 1.005 )
+
+[node name="SpikeCollider6" parent="." instance=ExtResource( 2 )]
+position = Vector2( -67.5, 179.5 )
+scale = Vector2( 1.04, 1.005 )
+
+[node name="SpikeCollider7" parent="." instance=ExtResource( 2 )]
+position = Vector2( -65.5, 205.5 )
+scale = Vector2( 1.04, 1.005 )
+
+[node name="SpikeCollider8" parent="." instance=ExtResource( 2 )]
+position = Vector2( -67.9999, 238 )
+scale = Vector2( 1.04, 1.005 )
+
+[node name="SpikeCollider9" parent="." instance=ExtResource( 2 )]
+position = Vector2( -66.4999, 263 )
+scale = Vector2( 1.04, 1.005 )
+
+[node name="SpikeCollider10" parent="." instance=ExtResource( 2 )]
+position = Vector2( -64, 288.5 )
+scale = Vector2( 1.04, 1.005 )
+
+[node name="Mushroom" parent="." instance=ExtResource( 3 )]
+position = Vector2( 584, 325 )
+
+[node name="Mushroom2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 320, 326 )
+sequence_number = 1
+
+[node name="Mushroom3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 82.5, 323.5 )
+sequence_number = 2
+
+[node name="Mushroom4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 146.5, 229.5 )
+sequence_number = 3
+
+[node name="Mushroom5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 258.5, 228.5 )
+sequence_number = 4
+
+[node name="Mushroom6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 275, 132.5 )
+sequence_number = 5
+
+[node name="Mushroom7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 132, 131.5 )
+sequence_number = 6
+
+[node name="Mushroom8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 190, 42.5 )
+sequence_number = 7
+
+[node name="Mushroom9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 389.5, 45 )
+sequence_number = 8
+
+[node name="Mushroom10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 615.5, 40 )
+sequence_number = 9
+last = true
+
+[node name="Start" type="Node2D" parent="."]
+position = Vector2( 615.5, 41 )
+
+[node name="SpikeMine" parent="." instance=ExtResource( 4 )]
+position = Vector2( 550, 100 )
+
+[node name="SpikeMine7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 520, 100 )
+
+[node name="SpikeMine8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 490, 100 )
+
+[node name="SpikeMine9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 460, 100 )
+
+[node name="SpikeMine2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 600, 140 )
+
+[node name="SpikeMine3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 550, 175 )
+
+[node name="SpikeMine4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 600, 210 )
+
+[node name="SpikeMine5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 550, 245 )
+
+[node name="SpikeMine6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 200, 330 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpikeMine6"]
+autoplay = "up-down"
+playback_speed = 1.8
+anims/RESET = SubResource( 1 )
+anims/up-down = SubResource( 2 )

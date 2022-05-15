@@ -12,9 +12,10 @@ var levels = {
 	2: "res://Level02.tscn",
 	3: "res://Level03.tscn",
 	4: "res://Level04.tscn",
-	5: "res://Level07.tscn",
-	6: "res://Level08.tscn"
-	}
+	5: "res://Level05.tscn",
+	6: "res://Level07.tscn",
+	7: "res://Level08.tscn"
+}
 
 func _ready():
 	Signals.connect("play_activated", self, "play_activated")

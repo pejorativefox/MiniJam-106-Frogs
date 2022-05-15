@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://SpikeCollider.tscn" type="PackedScene" id=1]
 [ext_resource path="res://data/tilesets/level.tres" type="TileSet" id=2]
 [ext_resource path="res://Mushroom.tscn" type="PackedScene" id=3]
+[ext_resource path="res://SpikeMine.tscn" type="PackedScene" id=4]
 
 [node name="LevelRoot" type="Node2D"]
 scale = Vector2( 2, 2 )
@@ -84,3 +85,6 @@ last = true
 
 [node name="Start" type="Node2D" parent="."]
 position = Vector2( 24, 40.5 )
+
+[node name="SpikeMine" parent="." instance=ExtResource( 4 )]
+position = Vector2( 625, 189.5 )

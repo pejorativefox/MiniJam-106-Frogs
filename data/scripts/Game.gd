@@ -7,7 +7,7 @@ var lap_timer = null
 var pause_menu = null
 
 var levels = {
-	1: "res://Level01.tscn",
+	1: "res://Level04.tscn",
 	2: "res://Level02.tscn",
 	3: "res://Level03.tscn",
 	4: "res://Level07.tscn",

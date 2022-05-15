@@ -52,9 +52,11 @@ func _physics_process(delta):
 		else:
 			player_sprite.play("walk")
 		if Input.is_action_just_pressed("jump"):
+			Signals.emit_signal("jump_sound")
 			velocity.y = -JUMP_FORCE
 	else:
 		player_sprite.play("jump")
+		
 		if Input.is_action_just_released("jump") and velocity.y < -JUMP_FORCE/2:
 			velocity.y = -JUMP_FORCE/2
 			

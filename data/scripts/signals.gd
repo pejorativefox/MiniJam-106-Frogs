@@ -5,8 +5,15 @@ extends Node
 signal play_activated()
 signal about_activated()
 
+#sounds
 signal menu_activated_sound()
 signal menu_navigated_sound()
+signal start_menu_music()
+signal stop_menu_music()
+
+signal picked_coin_sound()
+signal fanfare_sound()
+signal jump_sound()
 
 # Game
 signal mushroom_collected(s_number)

@@ -168,5 +168,6 @@ autostart = true
 
 [node name="SplatSpund" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 7 )
+volume_db = -4.37
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

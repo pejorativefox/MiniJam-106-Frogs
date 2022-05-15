@@ -5,6 +5,7 @@ var current_level_id = 1
 var current_level = null
 var lap_timer = null
 var pause_menu = null
+var rng = RandomNumberGenerator.new()
 
 var levels = {
 	1: "res://Level01.tscn",
@@ -26,10 +27,46 @@ func _ready():
 	Signals.connect("post_win", self, "post_win")
 	Signals.connect("menu_activated_sound", self, "menu_activated_sound")
 	Signals.connect("menu_navigated_sound", self, "menu_navigated_sound")
+	Signals.connect("picked_coin_sound", self, "picked_coin_sound")
+	Signals.connect("fanfare_sound", self, "fanfare_sound")
+	Signals.connect("jump_sound", self, "jump_sound")
+	Signals.connect("start_menu_music", self, "start_menu_music")
+	Signals.connect("stop_menu_music", self, "stop_menu_music")
+	rng.randomize()
 	main_menu = load("res://MainMenu.tscn").instance()
 	self.add_child(main_menu)
+	start_menu_music()
 	add_transition()
 	print_debug("Game.gd ready")
+
+func start_menu_music():
+	$Audio/MainMenuMusic.play()
+	
+func stop_menu_music():
+	$Audio/MainMenuMusic.stop()
+
+func start_level_music():
+	var num = rng.randi_range (0, 2)
+	if num == 0:
+		$Audio/LevelMusic01.play()
+	elif num == 1:
+		$Audio/LevelMusic02.play()
+	elif num == 2:
+		$Audio/LevelMusic03.play()
+
+func stop_level_music():
+	$Audio/LevelMusic01.stop()
+	$Audio/LevelMusic02.stop()
+	$Audio/LevelMusic03.stop()
+
+func jump_sound():
+	$Audio/Jump.play()
+
+func fanfare_sound():
+	$Audio/Fanfare.play()
+
+func picked_coin_sound():
+	$Audio/PickedCoin.play()
 
 func menu_activated_sound():
 	$Audio/Confirm.play()
@@ -39,6 +76,7 @@ func menu_navigated_sound():
 
 func play_activated():
 	print_debug("play_activated")
+	stop_menu_music()
 	self.remove_child(main_menu)
 	main_menu.queue_free()
 	start_level(current_level)
@@ -69,10 +107,12 @@ func start_level(level_id):
 	var start_node = current_level.get_node("Start")
 	player.position = start_node.position
 	get_tree().paused = false
+	start_level_music()
 	add_transition()
 
 func level_finished():
 	print("level_finished")
+	stop_level_music()
 	get_tree().paused = true
 	add_child(load("res://StageClear.tscn").instance())
 	
@@ -106,9 +146,11 @@ func unpause_level():
 	get_tree().paused = false
 
 func exit_level():
+	stop_level_music()
 	delete_level()
 	main_menu = load("res://MainMenu.tscn").instance()
 	self.add_child(main_menu)
+	start_menu_music()
 	current_level_id = 1
 	add_transition()
 
@@ -129,6 +171,7 @@ func game_win():
 func post_win():
 	delete_level()
 	main_menu = load("res://MainMenu.tscn").instance()
+	start_menu_music()
 	self.add_child(main_menu)
 	get_tree().paused = false
 	current_level_id = 1

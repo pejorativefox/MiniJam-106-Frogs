@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/gods_forbid.ogg-21884fe84893fd1c7c20d8c7dd402f9e.oggstr"
+
+[deps]
+
+source_file="res://data/music/gods_forbid.ogg"
+dest_files=[ "res://.import/gods_forbid.ogg-21884fe84893fd1c7c20d8c7dd402f9e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

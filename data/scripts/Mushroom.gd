@@ -15,6 +15,7 @@ func _ready():
 func mushroom_collected(s_number):
 	if s_number == sequence_number:
 		set_not_ready()
+		Signals.emit_signal("picked_coin_sound")
 		if last:
 			Signals.emit_signal("last_mushroom_collected")
 	elif s_number+1 == sequence_number:

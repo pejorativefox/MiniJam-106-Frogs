@@ -15,6 +15,7 @@ signal pause_level()
 signal next_level()
 signal unpause_level()
 signal exit_level()
+signal player_off_map()
 
 func _ready():
 	print("Signals: Autoloaded.")

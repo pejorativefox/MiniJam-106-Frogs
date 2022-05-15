@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://data/tilesets/level.tres" type="TileSet" id=1]
-[ext_resource path="res://Mushroom.tscn" type="PackedScene" id=2]
-[ext_resource path="res://SpikeCollider.tscn" type="PackedScene" id=3]
+[ext_resource path="res://SpikeCollider.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Mushroom.tscn" type="PackedScene" id=3]
 
 [node name="LevelRoot" type="Node2D"]
 scale = Vector2( 2, 2 )
@@ -13,77 +13,77 @@ cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 format = 1
 
-[node name="SpikeCollider" parent="." instance=ExtResource( 3 )]
+[node name="SpikeCollider" parent="." instance=ExtResource( 2 )]
 position = Vector2( -67.5, 51 )
 scale = Vector2( 6.7754, 1.42178 )
 
-[node name="SpikeCollider2" parent="." instance=ExtResource( 3 )]
+[node name="SpikeCollider2" parent="." instance=ExtResource( 2 )]
 position = Vector2( -67, 81 )
 scale = Vector2( 6.68, 1 )
 
-[node name="SpikeCollider3" parent="." instance=ExtResource( 3 )]
+[node name="SpikeCollider3" parent="." instance=ExtResource( 2 )]
 position = Vector2( -64, 109.5 )
 
-[node name="SpikeCollider4" parent="." instance=ExtResource( 3 )]
+[node name="SpikeCollider4" parent="." instance=ExtResource( 2 )]
 position = Vector2( -64, 132.5 )
 scale = Vector2( 1.24, 1.005 )
 
-[node name="SpikeCollider5" parent="." instance=ExtResource( 3 )]
+[node name="SpikeCollider5" parent="." instance=ExtResource( 2 )]
 position = Vector2( -61.5001, 158.5 )
 scale = Vector2( 1.04, 1.005 )
 
-[node name="SpikeCollider6" parent="." instance=ExtResource( 3 )]
+[node name="SpikeCollider6" parent="." instance=ExtResource( 2 )]
 position = Vector2( -67.5, 179.5 )
 scale = Vector2( 1.04, 1.005 )
 
-[node name="SpikeCollider7" parent="." instance=ExtResource( 3 )]
+[node name="SpikeCollider7" parent="." instance=ExtResource( 2 )]
 position = Vector2( -65.5, 205.5 )
 scale = Vector2( 1.04, 1.005 )
 
-[node name="SpikeCollider8" parent="." instance=ExtResource( 3 )]
+[node name="SpikeCollider8" parent="." instance=ExtResource( 2 )]
 position = Vector2( -67.9999, 238 )
 scale = Vector2( 1.04, 1.005 )
 
-[node name="SpikeCollider9" parent="." instance=ExtResource( 3 )]
+[node name="SpikeCollider9" parent="." instance=ExtResource( 2 )]
 position = Vector2( -66.4999, 263 )
 scale = Vector2( 1.04, 1.005 )
 
-[node name="SpikeCollider10" parent="." instance=ExtResource( 3 )]
+[node name="SpikeCollider10" parent="." instance=ExtResource( 2 )]
 position = Vector2( -64, 288.5 )
 scale = Vector2( 1.04, 1.005 )
 
-[node name="Mushroom" parent="." instance=ExtResource( 2 )]
+[node name="Mushroom" parent="." instance=ExtResource( 3 )]
 position = Vector2( -145, 311 )
 
-[node name="Mushroom2" parent="." instance=ExtResource( 2 )]
+[node name="Mushroom2" parent="." instance=ExtResource( 3 )]
 position = Vector2( -120.5, 310 )
 sequence_number = 1
 
-[node name="Mushroom3" parent="." instance=ExtResource( 2 )]
+[node name="Mushroom3" parent="." instance=ExtResource( 3 )]
 position = Vector2( -97.5, 311 )
 sequence_number = 2
 
-[node name="Mushroom4" parent="." instance=ExtResource( 2 )]
+[node name="Mushroom4" parent="." instance=ExtResource( 3 )]
 position = Vector2( -75, 310 )
 sequence_number = 3
 
-[node name="Mushroom5" parent="." instance=ExtResource( 2 )]
+[node name="Mushroom5" parent="." instance=ExtResource( 3 )]
 position = Vector2( -57, 309 )
 sequence_number = 4
 
-[node name="Mushroom6" parent="." instance=ExtResource( 2 )]
+[node name="Mushroom6" parent="." instance=ExtResource( 3 )]
 position = Vector2( -35.5, 309.5 )
 sequence_number = 5
 
-[node name="Mushroom7" parent="." instance=ExtResource( 2 )]
+[node name="Mushroom7" parent="." instance=ExtResource( 3 )]
 position = Vector2( -16.5, 310.5 )
 sequence_number = 6
 
-[node name="Mushroom8" parent="." instance=ExtResource( 2 )]
+[node name="Mushroom8" parent="." instance=ExtResource( 3 )]
 position = Vector2( -134, 336 )
 sequence_number = 7
 
-[node name="Mushroom9" parent="." instance=ExtResource( 2 )]
+[node name="Mushroom9" parent="." instance=ExtResource( 3 )]
 position = Vector2( -113.5, 339.5 )
 sequence_number = 8
 last = true

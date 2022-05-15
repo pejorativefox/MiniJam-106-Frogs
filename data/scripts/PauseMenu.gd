@@ -3,19 +3,18 @@ extends CanvasLayer
 var selected = 0
 
 func _input(event):
-	if Input.is_action_pressed("ui_cancel"):
-		Signals.emit_signal("unpause_level")
+#	if Input.is_action_pressed("ui_cancel"):
+#		Signals.emit_signal("unpause_level")
 	if Input.is_action_pressed("ui_accept"):
 		if selected == 0:
 			Signals.emit_signal("unpause_level")
 		else:
 			Signals.emit_signal("unpause_level")
 			Signals.emit_signal("exit_level")
-	if Input.is_action_pressed("ui_down") or Input.is_action_pressed("ui_up"):
-		if selected == 0:
-			selected = 1
-		else:
-			selected = 0
+	if Input.is_action_pressed("ui_down"):
+		selected = 1
+	elif Input.is_action_pressed("ui_up"):
+		selected = 0
 	
 func _process(delta):
 	$Control/ResumeLabel.modulate = Color(1,1,1,1)

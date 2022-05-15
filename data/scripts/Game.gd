@@ -7,8 +7,11 @@ var lap_timer = null
 var pause_menu = null
 
 var levels = {
-	1: "res://Level02.tscn",
-	2: "res://Level01.tscn"
+	1: "res://Level01.tscn",
+	2: "res://Level02.tscn",
+	3: "res://Level03.tscn",
+	4: "res://Level07.tscn",
+	5: "res://Level08.tscn"
 	}
 
 func _ready():
@@ -18,6 +21,7 @@ func _ready():
 	Signals.connect("pause_level", self, "pause_level")
 	Signals.connect("unpause_level", self, "unpause_level")
 	Signals.connect("next_level", self, "next_level")
+	Signals.connect("player_off_map", self, "player_off_map")
 	main_menu = load("res://MainMenu.tscn").instance()
 	self.add_child(main_menu)
 	add_transition()
@@ -75,6 +79,7 @@ func pause_level():
 	print("pause_level signaled")
 	pause_menu = load("res://PauseMenu.tscn").instance()
 	add_child(pause_menu)
+	get_tree().set_input_as_handled()
 	get_tree().paused = true
 
 func unpause_level():
@@ -90,3 +95,9 @@ func exit_level():
 	self.add_child(main_menu)
 	current_level_id = 1
 	add_transition()
+
+func player_off_map():
+	var player = current_level.get_node("Frog")
+	var start = current_level.get_node("Start")
+	player.velocity = Vector2.ZERO
+	player.position = start.position

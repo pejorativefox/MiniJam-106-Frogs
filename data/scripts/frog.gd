@@ -6,7 +6,7 @@ const ACCEL = 1028
 const MAX_SPEED = 256
 const FRICTION = 1
 const AIR_RESIST = 0.02
-const JUMP_FORCE = 350
+const JUMP_FORCE = 360
 
 export(bool) var godmode = false
 
@@ -28,6 +28,7 @@ func _unhandled_input(event):
 				OS.window_fullscreen = !OS.window_fullscreen
 			if event.scancode == KEY_ESCAPE:
 				Signals.emit_signal("pause_level")
+
 
 
 func _physics_process(delta):
@@ -62,8 +63,7 @@ func _physics_process(delta):
 	
 	# check off screen
 	if position.y > resolution.y:
-		position.x = 40
-		position.y = 320
+		Signals.emit_signal("player_off_map")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

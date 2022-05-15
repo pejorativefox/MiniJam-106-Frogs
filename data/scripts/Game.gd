@@ -18,6 +18,7 @@ var levels = {
 }
 
 func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	Signals.connect("play_activated", self, "play_activated")
 	Signals.connect("level_finished", self, "level_finished")
 	Signals.connect("exit_level", self, "exit_level")

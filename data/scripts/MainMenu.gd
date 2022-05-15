@@ -6,7 +6,7 @@ onready var container = $MenuItemContainer
 
 func _ready():
 	container.add_child(new_menu_item("Play"))
-	container.add_child(new_menu_item("About"))
+#	container.add_child(new_menu_item("About"))
 	container.add_child(new_menu_item("Exit"))
 
 func _input(event):
@@ -27,6 +27,7 @@ func _input(event):
 			Signals.emit_signal("play_activated")
 		elif current_selection == 1:
 			Signals.emit_signal("about_activated")
+			get_tree().quit()
 		elif current_selection == 2:
 			get_tree().quit()
 		Signals.emit_signal("menu_activated_sound")

@@ -102,4 +102,4 @@ sequence_number = 9
 last = true
 
 [node name="Start" type="Node2D" parent="."]
-position = Vector2( 33, 335.5 )
+position = Vector2( 45.5, 322.5 )

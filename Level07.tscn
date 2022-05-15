@@ -64,12 +64,12 @@ position = Vector2( 72, 20.5 )
 sequence_number = 7
 
 [node name="Mushroom9" parent="." instance=ExtResource( 3 )]
-position = Vector2( 21, 309 )
+position = Vector2( 27, 309.5 )
 sequence_number = 8
 last = true
 
 [node name="Start" type="Node2D" parent="."]
-position = Vector2( 39.5, 318.5 )
+position = Vector2( 49.5, 316 )
 
 [node name="SpikeMine" parent="." instance=ExtResource( 4 )]
 position = Vector2( 63.5, 164.5 )

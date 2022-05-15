@@ -83,7 +83,7 @@ position = Vector2( 70.5, 229.5 )
 sequence_number = 6
 
 [node name="Mushroom8" parent="." instance=ExtResource( 2 )]
-position = Vector2( 260, 293.5 )
+position = Vector2( 270, 251.5 )
 sequence_number = 7
 last = true
 

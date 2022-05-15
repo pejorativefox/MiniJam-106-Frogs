@@ -2,7 +2,7 @@ extends Control
 
 var current_lap = 1
 var elapsed_time = 0.0
-var total_laps = 2
+var total_laps = 3
 var finished = false
 
 onready var lap_times_container = $VBoxContainer/LapTimes

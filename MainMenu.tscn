@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://MainMenuControls.tscn" type="PackedScene" id=1]
 [ext_resource path="res://data/images/logo.png" type="Texture" id=2]
 [ext_resource path="res://data/scripts/Logo.gd" type="Script" id=3]
 [ext_resource path="res://data/music/campfire-vibes.mp3" type="AudioStream" id=4]
+[ext_resource path="res://data/images/controls.png" type="Texture" id=5]
+[ext_resource path="res://data/images/frog.png" type="Texture" id=6]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -31,10 +33,22 @@ tracks/1/keys = {
 "update": 0,
 "values": [ -72.7 ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Frog:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 653, -80 ) ]
+}
 
 [sub_resource type="Animation" id=2]
 resource_name = "intro"
-length = 3.0
+length = 5.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
@@ -58,6 +72,18 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ -80.0, -80.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Frog:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 3, 3.2, 3.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 653, -80 ), Vector2( 653, 320 ), Vector2( 653, 418 ) ]
 }
 
 [node name="MainMenu" type="Node2D"]
@@ -86,3 +112,15 @@ anims/intro = SubResource( 2 )
 position = Vector2( 656, 0 )
 stream = ExtResource( 4 )
 autoplay = true
+
+[node name="Controls" type="Sprite" parent="."]
+position = Vector2( 1071, 104 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 5 )
+
+[node name="Frog" type="Sprite" parent="."]
+position = Vector2( 653, -80 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 6 )
+hframes = 4
+vframes = 2

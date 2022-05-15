@@ -95,6 +95,10 @@ sequence_number = 7
 [node name="Mushroom9" parent="." instance=ExtResource( 2 )]
 position = Vector2( 77.5, 49 )
 sequence_number = 8
+
+[node name="Mushroom10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 22, 325 )
+sequence_number = 9
 last = true
 
 [node name="Start" type="Node2D" parent="."]

@@ -8,7 +8,6 @@ func _ready():
 	$SplatSpund
 
 func splode(position):
-	print("splode: ", position)
 	self.position = position
 	$AnimationPlayer.play("splode")
 	$SplatSpund.play()

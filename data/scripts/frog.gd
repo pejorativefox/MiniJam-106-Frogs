@@ -22,6 +22,8 @@ func _ready():
 
 
 func _unhandled_input(event):
+	if Input.is_action_pressed("ui_select"):
+		Signals.emit_signal("pause_level")
 	if event is InputEventKey:
 		if event.pressed:
 			if event.scancode == KEY_F:

@@ -15,11 +15,13 @@ func _input(event):
 			current_selection = container.get_child_count()-1
 		else:
 			current_selection -= 1
+		Signals.emit_signal("menu_navigated_sound")
 	elif event.is_action_pressed("ui_down"):
 		if current_selection == container.get_child_count()-1:
 			current_selection = 0
 		else:
 			current_selection += 1
+		Signals.emit_signal("menu_navigated_sound")
 	elif event.is_action_pressed("ui_accept"):
 		if current_selection == 0:
 			Signals.emit_signal("play_activated")
@@ -27,6 +29,7 @@ func _input(event):
 			Signals.emit_signal("about_activated")
 		elif current_selection == 2:
 			get_tree().quit()
+		Signals.emit_signal("menu_activated_sound")
 
 func _process(delta):
 	for n in range(0, container.get_child_count(), 1):

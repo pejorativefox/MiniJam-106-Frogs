@@ -12,6 +12,9 @@ config_version=4
 
 config/name="Mini Jam-106-Frogs"
 run/main_scene="res://GameScene.tscn"
+boot_splash/image="res://data/images/logo.png"
+boot_splash/fullsize=false
+boot_splash/use_filter=false
 config/icon="res://icon.png"
 
 [autoload]

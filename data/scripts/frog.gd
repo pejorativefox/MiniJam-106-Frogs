@@ -27,7 +27,7 @@ func _unhandled_input(event):
 			if event.scancode == KEY_F:
 				OS.window_fullscreen = !OS.window_fullscreen
 			if event.scancode == KEY_ESCAPE:
-				Signals.emit_signal("exit_level")
+				Signals.emit_signal("pause_level")
 
 
 func _physics_process(delta):

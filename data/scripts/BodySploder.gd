@@ -5,11 +5,13 @@ func _ready():
 	$FrontLegParticles.emitting = false
 	$RearLegParticles.emitting = false
 	$BloodParticles.emitting = false
+	$SplatSpund
 
 func splode(position):
 	print("splode: ", position)
 	self.position = position
 	$AnimationPlayer.play("splode")
+	$SplatSpund.play()
 
 
 func _on_Timer_timeout():

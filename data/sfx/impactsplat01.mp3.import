@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/impactsplat01.mp3-0184c5abde93bf9b063679ea683d872b.mp3str"
+
+[deps]
+
+source_file="res://data/sfx/impactsplat01.mp3"
+dest_files=[ "res://.import/impactsplat01.mp3-0184c5abde93bf9b063679ea683d872b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

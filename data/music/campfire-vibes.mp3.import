@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/campfire-vibes.mp3-9e7e99f451c78099e6350b162012825c.mp3str"
+
+[deps]
+
+source_file="res://data/music/campfire-vibes.mp3"
+dest_files=[ "res://.import/campfire-vibes.mp3-9e7e99f451c78099e6350b162012825c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

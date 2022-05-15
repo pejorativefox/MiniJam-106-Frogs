@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://data/images/giblets.png" type="Texture" id=1]
 [ext_resource path="res://data/scripts/BodySploder.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://data/particles/RearLegdParticlesMaterial.tres" type="Material" id=4]
 [ext_resource path="res://data/particles/FrontLegParticlesMaterial.tres" type="Material" id=5]
 [ext_resource path="res://data/images/blood.png" type="Texture" id=6]
+[ext_resource path="res://data/sfx/impactsplat01.tres" type="AudioStream" id=7]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 particles_animation = true
@@ -164,5 +165,8 @@ anims/splode = SubResource( 3 )
 wait_time = 3.0
 one_shot = true
 autostart = true
+
+[node name="SplatSpund" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
